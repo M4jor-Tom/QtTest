@@ -1,4 +1,4 @@
-#include "MyTimer.h"
+#include "mytimer.h"
 #include <QApplication>
 
 #include <QStringList>
@@ -28,8 +28,7 @@ int main(int argc, char *argv[])
     view2->setModel(model);
 
     // Création d'un contrôleur sous la forme d’un timer
-    MyTimer *timer = new MyTimer(&list);
-    timer -> start(1000);
+    MyTimer *timer = new MyTimer(model);
 
     // affichage des vues
     view1->show();
