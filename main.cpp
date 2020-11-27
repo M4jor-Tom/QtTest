@@ -1,4 +1,4 @@
-//#include "MyTimer.h"
+#include "MyTimer.h"
 #include <QApplication>
 
 #include <QStringList>
@@ -18,10 +18,8 @@ int main(int argc, char *argv[])
     QStringList list;
     list << "Dheepan" << "De rouille et d'os" << "Un prophète" << "Sur mes lèvres" << "De battre mon coeur s'est arrêté";
 
-
     // Création du modèle
     QAbstractItemModel *model = new QStringListModel(list);
-
 
     // Création des deux vues
     QListView *view1 = new QListView();
@@ -30,8 +28,7 @@ int main(int argc, char *argv[])
     view2->setModel(model);
 
     // Création d'un contrôleur sous la forme d’un timer
-    QTimer *timer = new QTimer();
-    timer -> start();
+    MyTimer *timer = new MyTimer();
 
     // affichage des vues
     view1->show();
