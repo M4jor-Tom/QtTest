@@ -3,7 +3,7 @@
 MyTimer::MyTimer()
 {
     QTimer *timer = new QTimer(this);
-    connect(timer, &QTimer::timeout, this, QOverload<>::of(&MyTimer::update));
+    connect(timer, &QTimer::timeout, this, &MyTimer::update);
     timer->start(1000);
 }
 
