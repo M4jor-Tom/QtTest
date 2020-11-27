@@ -1,6 +1,6 @@
 #include "mytimer.h"
 
-MyTimer::MyTimer()
+MyTimer::MyTimer(QStringList *list_): _list(list_)
 {
     QTimer *timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MyTimer::update);
@@ -9,5 +9,5 @@ MyTimer::MyTimer()
 
 void MyTimer::update()
 {
-
+    _list -> sort();
 }

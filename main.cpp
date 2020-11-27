@@ -28,7 +28,8 @@ int main(int argc, char *argv[])
     view2->setModel(model);
 
     // Création d'un contrôleur sous la forme d’un timer
-    MyTimer *timer = new MyTimer();
+    MyTimer *timer = new MyTimer(&list);
+    timer -> start(1000);
 
     // affichage des vues
     view1->show();

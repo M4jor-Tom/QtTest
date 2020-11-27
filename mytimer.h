@@ -5,8 +5,10 @@
 
 class MyTimer : public QTimer
 {
+private:
+    QStringList *_list;
 public:
-    MyTimer();
+    MyTimer(QStringList *list_);
     void update();
 };
 
